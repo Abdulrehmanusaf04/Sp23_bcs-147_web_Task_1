@@ -34,6 +34,16 @@ body {
     margin-left: 100px;
     margin-top: 100px;
   }
+  .fa-bars{
+    font-size: 30px;
+    color: white;
+    /* margin-left: 100px;
+    margin-top: 100px; */
+    position: absolute;
+    z-index: 1;
+    top:120px;
+    left:1200px;
+  }
   .stats-image{
     position: absolute;
     z-index:1;
@@ -172,3 +182,105 @@ body {
   What we offer section
 --------------------------
 */
+.offer-section{
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  background-color:rgb(239, 239, 239);
+}
+.offer-section-content{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.offer-section-content hr{
+  width: 80%;
+  height: 0.5px;
+  background-color: #e30569;
+  margin-bottom: 30px;
+}
+.offer-items-R1{
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap:50px;
+}
+.offer-items-R1-1{
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap:40px;
+}
+.fa-user-group{
+  color:#e30569;
+  font-size: 45px;
+}
+.fa-hourglass-half{
+  color:#e30569;
+  font-size: 45px;
+}
+.fa-credit-card{
+  color:#e30569;
+  font-size: 45px;
+}
+.fa-box-archive{
+  color:#e30569;
+  font-size: 45px;
+}
+.fa-leaf{
+  color:#e30569;
+  font-size: 45px;
+}
+.offer-items-R1-1-heading{
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-size: 21px;
+  color:#353638;;
+  font-weight: 200;
+  line-height: 0.4;
+  opacity: 0.8;
+}
+.offer-items-R1-1-para{
+  font-size: 13px;
+  color:#353638;
+  opacity: 0.7;
+}
+.offer-items-R2{
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap:50px;
+  margin-top: 30px;
+}
+/*
+--------------------------
+  Process section
+--------------------------
+*/
+.process-section{
+  height: 850px; /* full screen height */
+  background-image: url("Images/process-section-bg.png"); /* path to image */
+  background-size: cover;      /* makes image cover whole div */
+  background-position: center; /* centers the image */
+  background-repeat: no-repeat;/* prevents tiling */
+  color: white;
+  position: relative;
+}
+
+.process-section-container{
+  margin-top: 50px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: start;
+  margin-left: 10%;
+  gap: 100px;
+}
+.process-content-txt{
+  color:#353638;
+  text-align: left;
+}
