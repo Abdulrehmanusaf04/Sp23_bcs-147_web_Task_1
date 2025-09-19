@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daraz - Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- <a href="#" class="logo">BR PR</a> -->
+            <img
+                    src="Images/Logo.png"
+                    alt="bepr Logo"
+                    class="logo-image"
+            />
+            <div class="checkout-progress">
+                <div class="progress-step active">
+                    <span class="step-number">1</span>
+                    <span class="step-text">Address</span>
+                </div>
+                <div class="progress-step">
+                    <span class="step-number">2</span>
+                    <span class="step-text">Payment</span>
+                </div>
+                <div class="progress-step">
+                    <span class="step-number">3</span>
+                    <span class="step-text">Confirmation</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="checkout-container">
+        <div class="checkout-content">
+            <!-- Delivery Address Section -->
+            <section class="checkout-section">
+                <h2 class="section-title">Delivery Address</h2>
+                <div class="address-cards">
+                    <div class="address-card selected">
+                        <div class="address-header">
+                            <h3>Home Address</h3>
+                            <span class="default-badge">Default</span>
+                        </div>
+                        <p class="address-details">
+                            John Smith<br>
+                            123 Main Street, Apartment 4B<br>
+                            Colombo 00500<br>
+                            Sri Lanka<br>
+                            Phone: 0771234567
+                        </p>
+                        <button class="btn-select-address">Selected</button>
+                    </div>
+                    
+                    <div class="address-card">
+                        <div class="address-header">
+                            <h3>Office Address</h3>
+                        </div>
+                        <p class="address-details">
+                            John Smith<br>
+                            Tech Park Building, Floor 7<br>
+                            Colombo 00200<br>
+                            Sri Lanka<br>
+                            Phone: 0777654321
+                        </p>
+                        <button class="btn-select-address">Select</button>
+                    </div>
+                    
+                    <div class="add-new-address">
+                        <i class="fas fa-plus"></i>
+                        <p>Add New Address</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Payment Method Section -->
+            <section class="checkout-section">
+                <h2 class="section-title">Payment Method</h2>
+                <div class="payment-methods">
+                    <div class="payment-method selected">
+                        <div class="payment-radio">
+                            <input type="radio" name="payment" id="cod" checked>
+                            <label for="cod">Cash on Delivery</label>
+                        </div>
+                        <div class="payment-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-method">
+                        <div class="payment-radio">
+                            <input type="radio" name="payment" id="card">
+                            <label for="card">Credit/Debit Card</label>
+                        </div>
+                        <div class="payment-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-method">
+                        <div class="payment-radio">
+                            <input type="radio" name="payment" id="wallet">
+                            <label for="wallet">Daraz Wallet</label>
+                        </div>
+                        <div class="payment-icon">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Order Summary Section -->
+            <section class="checkout-section">
+                <h2 class="section-title">Order Summary</h2>
+                <div class="order-items">
+                    <div class="order-item">
+                        <div class="item-image">
+                            <img src="https://via.placeholder.com/80" alt="Product">
+                        </div>
+                        <div class="item-details">
+                            <h3 class="item-name">Wireless Bluetooth Headphones with Noise Cancellation</h3>
+                            <p class="item-seller">Sold by: TechGadgets</p>
+                            <div class="item-price">
+                                <span class="current-price">Rs. 4,599</span>
+                                <span class="original-price">Rs. 6,999</span>
+                                <span class="discount">34% off</span>
+                            </div>
+                            <div class="item-quantity">
+                                Quantity: 1
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="order-item">
+                        <div class="item-image">
+                            <img src="https://via.placeholder.com/80" alt="Product">
+                        </div>
+                        <div class="item-details">
+                            <h3 class="item-name">Smartphone Case - Premium Protection</h3>
+                            <p class="item-seller">Sold by: MobileAccessories</p>
+                            <div class="item-price">
+                                <span class="current-price">Rs. 1,299</span>
+                                <span class="original-price">Rs. 1,999</span>
+                                <span class="discount">35% off</span>
+                            </div>
+                            <div class="item-quantity">
+                                Quantity: 2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Order Summary Sidebar -->
+        <aside class="order-summary">
+            <h2 class="summary-title">Order Summary</h2>
+            <div class="price-details">
+                <div class="price-row">
+                    <span>Items (3)</span>
+                    <span>Rs. 7,197</span>
+                </div>
+                <div class="price-row">
+                    <span>Delivery Fee</span>
+                    <span>Rs. 200</span>
+                </div>
+                <div class="price-row">
+                    <span>Tax</span>
+                    <span>Rs. 144</span>
+                </div>
+                <div class="price-row total">
+                    <span>Total</span>
+                    <span>Rs. 7,541</span>
+                </div>
+            </div>
+            
+            <div class="promo-code">
+                <input type="text" placeholder="Enter promo code">
+                <button>Apply</button>
+            </div>
+            
+            <div class="delivery-info">
+                <p><i class="fas fa-truck"></i> Delivery by Tomorrow</p>
+            </div>
+            
+            <a><a href="thankyou.html"><button class="btn-place-order">Place Order</button></a>
+            <!-- <button class="btn-place-order">Place Order</button> -->
+            
+            <div class="security-notice">
+                <p><i class="fas fa-lock"></i> Your personal information is secure with us</p>
+            </div>
+        </aside>
+    </main>
+
+       <!-- Footer -->
+       <div class="footer">
+        <div class="logo-hr">
+            <hr/>
+            <img
+                src="Images/footer-logo.png"
+                alt="bepr Logo"
+                class="footer-logo-image"
+            />
+            <hr/>
+        </div>
+        <div class="footer-txt">
+            <div class="how-we-do">
+                <p class="how-we-do-heading">How we do it</p>
+                <div class="whats-the-point-lines">
+                    <i class="fa-solid fa-check"></i>
+                    <p class="how-we-do-para">Suspendisse a pellentesque dui, non felis.</p>
+                </div>
+                <div class="whats-the-point-lines">
+                    <i class="fa-solid fa-check"></i>
+                    <p class="how-we-do-para">Quisque lorem tortor fringilla sed.</p>
+                </div>
+                <div class="whats-the-point-lines">
+                    <i class="fa-solid fa-check"></i>
+                    <p class="how-we-do-para">Nulla ipsum dolor lacus, suscipit adipiscing.</p>
+                </div>
+            </div>
+            <div class="why-we-do">
+                <p class="why-we-do-heading">Why we do it</p>
+                <p class="why-we-do-para">Vitae adipiscing turpis. Aenean ligula nibh, molestie id viverra a,<br/> dapibus at dolor. In iaculis viverra neque, ac eleifend ante lobortis<br/>id. In viverra ipsum ac eros tris. Aenean ligula nibh, molestie id<br/> viverra a, dapibus at dolor. In iaculis viverra neque, ac eleifend<br/>ante lobortis id. In viverra ipsum ac eros.</p>
+            </div>
+            <div class="why-important">
+                <p class="why-important-heading">Why it’s important</p>
+                <p class="why-important-para">Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum<br/> commodo volutpat a, convallis ac, laoreet enim. Phasellus<br/> fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit<br/> amet magna. Vestibulum dapibus, mauris nec malesuada fames<br/> ac turpis velit, rhoncus eu luctus et.</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2025 Betheme by Muffin group | All Rights Reserved | Powered by WordPress</p>
+        </div>
+      </div>
+</body>
+</html>
