@@ -13,6 +13,25 @@ body {
   Banner section
 --------------------------
 */
+  .checkout-link{
+    float: right;
+    margin-right: 10px;
+    margin-top: 20px;
+  }
+  .checkout-button{
+    background-color: #e30569;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: aliceblue solid 2px;
+  }
   .banner {
     height: 100vh; /* full screen height */
     background-image: url("Images/banner.jpg"); /* path to image */
@@ -484,41 +503,40 @@ line-height: 1.3;
 */
 @media (max-width: 600px) {
 
-  /* General */
   body {
     font-size: 14px;
-    overflow-x: hidden; /* prevent sideways scrolling */
+    overflow-x: hidden;
   }
 
   /* Banner */
   .banner {
-    height: 70vh; /* smaller height */
+    height: 65vh;
     background-position: top;
   }
   .logo-image {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     margin-left: 20px;
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .fa-bars {
-    top: 20px;
-    left: auto;
-    right: 20px; /* move menu to right */
-    font-size: 24px;
+    top: 50px;
+    left: 370px;
+    right: 20px;
+    font-size: 30px;
   }
   .stats-image {
-    display: none; /* hide large stats image */
+    display: none; 
   }
   .banner-text {
     margin: 120px 20px 0 20px;
     text-align: center;
   }
   .banner-text h1 {
-    font-size: 32px;
+    font-size: 50px;
   }
   .banner-text h2 {
-    font-size: 18px;
+    font-size: 25px;
     margin-left: 0;
   }
 
@@ -575,7 +593,7 @@ line-height: 1.3;
 
   /* Process Section */
   .process-section {
-    height: auto;
+    height: 1650px;
     padding: 30px 15px;
   }
   .process-section-container {
@@ -599,7 +617,7 @@ line-height: 1.3;
   /* Get Started Section */
   .get-started {
     height: 400px;
-    background-attachment: scroll; /* better for mobile */
+    background-attachment: scroll;
   }
   .get-started-txt {
     width: 80%;
@@ -627,15 +645,21 @@ line-height: 1.3;
     padding: 0 15px;
   }
   .how-we-do{
-    margin-right: 100px;
+    margin-right: 80px;
   }
+  /* .how-we-do i{
+    margin-right:40px;
+  }
+  .how-we-do .whats-the-point-lines p{
+    margin-right: 80px;
+  } */
   .how-we-do,
   .why-we-do,
   .why-important {
     align-items: left;
   }
   .copyright p {
-    font-size: 11px;
+    font-size: 13px;
     padding: 20px 10px;
     text-align: center;
   }
