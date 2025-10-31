@@ -373,5 +373,109 @@
             </div>
           </div>
     </div>
+        <script>
+        // Testimonials functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const testimonialSection = document.querySelector('.testimonial-section');
+    const testimonialCards = document.querySelectorAll('.cards');
+    const viewMoreBtn = document.createElement('button');
+    
+    // Style the View More button to match your theme
+    viewMoreBtn.textContent = 'View More Testimonials';
+    viewMoreBtn.style.cssText = `
+        display: block;
+        margin: 30px auto;
+        padding: 12px 24px;
+        background-color: #e30569;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    `;
+    
+    // Add hover effect for button
+    viewMoreBtn.addEventListener('mouseenter', function() {
+        this.style.backgroundColor = '#c0045a';
+        this.style.transform = 'translateY(-2px)';
+    });
+    
+    viewMoreBtn.addEventListener('mouseleave', function() {
+        this.style.backgroundColor = '#e30569';
+        this.style.transform = 'translateY(0)';
+    });
+    
+    // Initially hide all cards beyond the first three
+    testimonialCards.forEach((card, index) => {
+        if (index >= 3) {
+            card.style.display = 'none';
+            card.style.opacity = '0';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        }
+    });
+    
+    // Insert the button after the testimonial cards container
+    testimonialSection.appendChild(viewMoreBtn);
+    
+    let allTestimonialsVisible = false;
+    
+    // Function to show all testimonials with smooth animation
+    function showAllTestimonials() {
+        testimonialCards.forEach((card, index) => {
+            if (index >= 3) {
+                card.style.display = 'block';
+                // Use setTimeout to trigger the opacity transition
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, 50 * (index - 3));
+            }
+        });
+        viewMoreBtn.textContent = 'View Less';
+        allTestimonialsVisible = true;
+    }
+    
+    // Function to hide extra testimonials with smooth animation
+    function hideExtraTestimonials() {
+        testimonialCards.forEach((card, index) => {
+            if (index >= 3) {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                // Hide after transition completes
+                setTimeout(() => {
+                    card.style.display = 'none';
+                }, 500);
+            }
+        });
+        viewMoreBtn.textContent = 'View More Testimonials';
+        allTestimonialsVisible = false;
+    }
+    
+    // Click event for View More button
+    viewMoreBtn.addEventListener('click', function() {
+        if (!allTestimonialsVisible) {
+            showAllTestimonials();
+        } else {
+            hideExtraTestimonials();
+        }
+    });
+    
+    // Hover event for the entire section
+    testimonialSection.addEventListener('mouseenter', function() {
+        if (!allTestimonialsVisible) {
+            showAllTestimonials();
+        }
+    });
+    
+    testimonialSection.addEventListener('mouseleave', function() {
+        if (allTestimonialsVisible) {
+            // Optional: Keep testimonials visible on mouse leave
+            // Or uncomment below to hide on mouse leave:
+            // hideExtraTestimonials();
+        }
+    });
+});
+    </script>
 </body>
 </html>
